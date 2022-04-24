@@ -28,10 +28,20 @@
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <LinearLayout
+        android:id="@+id/chatbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -41,6 +51,7 @@
             android:background="@android:color/transparent"
             android:layout_marginStart="8dp">
             <EditText
+                android:id="@+id/message_box"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Enter your message.."
@@ -48,13 +59,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/send_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fabSize="normal"
             android:src="@drawable/ic_send"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/design_default_color_on_primary"/>
+            android:background="@color/cardview_shadow_end_color"/>
     </LinearLayout>
 
 
