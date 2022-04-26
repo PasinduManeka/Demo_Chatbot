@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class MessageAdapter (var context:Context,var messageList:ArrayList<MessageClass>):RecyclerView.Adapter<MessageAdapter.MessageViewHolder>(){
-    class MessageViewHolder(view:View):RecyclerView.ViewHolder(view){
-
-    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -20,11 +17,15 @@ class MessageAdapter (var context:Context,var messageList:ArrayList<MessageClass
     }
 
     override fun onBindViewHolder(holder: MessageAdapter.MessageViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val message = messageList[position]
     }
 
     override fun getItemCount(): Int {
         TODO("Not yet implemented")
+    }
+
+    class MessageViewHolder(view:View):RecyclerView.ViewHolder(view){
+
     }
 
 }
